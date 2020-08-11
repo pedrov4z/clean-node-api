@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:staged": "jest"
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests",
+    "jest:ghostbuster": "jest --clearCache"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/node": "^13.1.6",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "eslint": "^6.8.0",
+    "eslint-config-standard-with-typescript": "^11.0.1",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^9.2.0",
     "eslint-plugin-promise": "^4.2.1",
