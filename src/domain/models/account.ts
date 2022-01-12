@@ -1,4 +1,4 @@
-import { AddAccountModel } from '../add-account'
+import { AddAccountModel } from '../usecases/add-account'
 
 export interface AccountModel extends AddAccountModel {
   id: string
