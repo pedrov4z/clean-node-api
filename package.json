@@ -1,8 +1,9 @@
 {
     "name": "clean-node-api",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
+    "author": "Pedro Vaz",
+    "license": "ISC",
     "scripts": {
         "start": "sucrase-node src/main/server.ts",
         "check": "npm-check -s -u",
@@ -15,9 +16,9 @@
         "test:ghostbuster": "jest --clearCache",
         "prepare": "husky install"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "engines": {
+        "node": "16.x"
+    },
     "devDependencies": {
         "@shelf/jest-mongodb": "^2.2.0",
         "@types/bcrypt": "^5.0.0",
@@ -41,9 +42,6 @@
         "supertest": "^6.2.1",
         "ts-jest": "27.1.2",
         "typescript": "4.5.4"
-    },
-    "engines": {
-        "node": "16.x"
     },
     "dependencies": {
         "bcrypt": "^5.0.1",
