@@ -3,14 +3,14 @@ import { RequiredFieldValidation } from './required-field-validation'
 
 describe('RequiredField Validation', () => {
   test('Should return MissingParamError if validation fails', () => {
-    const sut = new RequiredFieldValidation('any_field')
-    const error = sut.validate({ other_field: 'other_value' })
-    expect(error).toEqual(new MissingParamError('any_field'))
+    const sut = new RequiredFieldValidation('field')
+    const error = sut.validate({ other_field: 'any_value' })
+    expect(error).toEqual(new MissingParamError('field'))
   })
-    
-    test('Should return MissingParamError if validation fails', () => {
-    const sut = new RequiredFieldValidation('any_field')
-    const error = sut.validate({ other_field: 'other_value' })
-    expect(error).toEqual(new MissingParamError('any_field'))
+
+  test('Should not return if validation succeeds', () => {
+    const sut = new RequiredFieldValidation('field')
+    const error = sut.validate({ field: 'any_value' })
+    expect(error).toBeFalsy()
   })
 })
