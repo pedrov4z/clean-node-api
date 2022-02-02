@@ -5,7 +5,9 @@
     "author": "Pedro Vaz",
     "license": "ISC",
     "scripts": {
-        "start": "sucrase-node src/main/server.ts",
+        "start": "node dist/main/server.js",
+        "build": "rimraf dist && tsc",
+        "dev": "sucrase-node src/main/server.ts",
         "check": "npm-check -s -u",
         "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
         "test:verbose": "jest --passWithNoTests --runInBand",
@@ -39,6 +41,7 @@
         "husky": "^7.0.4",
         "jest": "27.4.7",
         "lint-staged": "12.1.7",
+        "rimraf": "^3.0.2",
         "sucrase": "^3.20.3",
         "supertest": "^6.2.1",
         "ts-jest": "27.1.2",
@@ -47,7 +50,6 @@
     "dependencies": {
         "bcrypt": "^5.0.1",
         "express": "^4.17.2",
-        "fast-glob": "^3.2.11",
         "jsonwebtoken": "^8.5.1",
         "mongodb": "^4.3.0",
         "validator": "^13.7.0"
