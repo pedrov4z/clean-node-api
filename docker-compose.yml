@@ -15,10 +15,12 @@ services:
     restart: always
     volumes:
       - ./dist:/usr/local/src/clean-node-api/dist
+      - ./package.json:/usr/local/src/clean-node-api/package.json
     ports:
       - "5050:5050"
+      - "9222:9222"
     links:
       - mongo
     environment:
       MONGO_URL: mongodb://mongo:27017/clean-node-api
-    command: yarn start
+    command: yarn debug
