@@ -7,14 +7,15 @@
     "scripts": {
         "start": "node dist/main/server.js",
         "build": "rimraf dist && tsc",
-        "dev": "sucrase-node src/main/server.ts",
-        "check": "npm-check -s -u",
+        "up": "yarn build && docker-compose up -d",
+        "down": "docker-compose down",
+        "check": "npx yarn-check -s -u",
         "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
         "test:verbose": "jest --passWithNoTests --runInBand",
-        "test:unit": "npm test -- --watch -c jest-unit.config.js",
-        "test:integration": "npm test -- --watch -c jest-integration.config.js",
-        "test:staged": "npm test -- --findRelatedTests",
-        "test:ci": "npm test -- --coverage",
+        "test:unit": "yarn test --watch -c jest-unit.config.js",
+        "test:integration": "yarn test --watch -c jest-integration.config.js",
+        "test:staged": "yarn test --findRelatedTests",
+        "test:ci": "yarn test --coverage",
         "test:ghostbuster": "jest --clearCache",
         "prepare": "husky install"
     },
@@ -42,10 +43,10 @@
         "jest": "27.4.7",
         "lint-staged": "12.1.7",
         "rimraf": "^3.0.2",
-        "sucrase": "^3.20.3",
         "supertest": "^6.2.1",
         "ts-jest": "27.1.2",
-        "typescript": "4.5.4"
+        "typescript": "4.5.4",
+        "yarn-check": "^0.0.3"
     },
     "dependencies": {
         "bcrypt": "^5.0.1",
