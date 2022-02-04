@@ -14,7 +14,7 @@ services:
     working_dir: /usr/local/src/clean-node-api
     restart: always
     volumes:
-      - ./dist:/usr/local/src/clean-node-api/dist
+      - ./dist/:/usr/local/src/clean-node-api/dist/
       - ./package.json:/usr/local/src/clean-node-api/package.json
     ports:
       - "5050:5050"
@@ -23,4 +23,4 @@ services:
       - mongo
     environment:
       MONGO_URL: mongodb://mongo:27017/clean-node-api
-    command: bash -c "yarn --prod && yarn debug"
+    command: bash -c "yarn --prod && yarn add -D nodemon && yarn debug"
