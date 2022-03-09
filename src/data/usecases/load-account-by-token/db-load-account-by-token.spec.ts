@@ -13,7 +13,7 @@ const makeFakeAccount = (): AccountModel => ({
 const makeDecrypter = (): Decrypter => {
   class DecrypterStub implements Decrypter {
     async decrypt (token: string): Promise<string> {
-      return await new Promise(resolve => resolve('any_token'))
+      return await new Promise(resolve => resolve('decrypted_token'))
     }
   }
   return new DecrypterStub()
@@ -60,6 +60,13 @@ describe('DbLoadAccountByToken Usecase', () => {
     expect(account).toBeNull()
   })
 
+  test('Should throw if Decrypter throws', async () => {
+    const { sut, decrypterStub } = makeSut()
+    jest.spyOn(decrypterStub, 'decrypt').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
+    const promise = sut.loadByToken('any_token', 'any_role')
+    await expect(promise).rejects.toThrow()
+  })
+
   test('Should call LoadAccountByTokenRepository with correct values', async () => {
     const { sut, loadAccountByTokenRepositoryStub } = makeSut()
     const loadByTokenSpy = jest.spyOn(loadAccountByTokenRepositoryStub, 'loadByToken')
@@ -74,23 +81,16 @@ describe('DbLoadAccountByToken Usecase', () => {
     expect(account).toBeNull()
   })
 
-  test('Should return an account on success', async () => {
-    const { sut } = makeSut()
-    const account = await sut.loadByToken('any_token', 'any_role')
-    expect(account).toEqual(makeFakeAccount())
-  })
-
-  test('Should throw if Decrypter throws', async () => {
-    const { sut, decrypterStub } = makeSut()
-    jest.spyOn(decrypterStub, 'decrypt').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
-    const promise = sut.loadByToken('any_token', 'any_role')
-    await expect(promise).rejects.toThrow()
-  })
-
   test('Should throw if LoadAccountByTokenRepository throws', async () => {
     const { sut, loadAccountByTokenRepositoryStub } = makeSut()
     jest.spyOn(loadAccountByTokenRepositoryStub, 'loadByToken').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
     const promise = sut.loadByToken('any_token', 'any_role')
     await expect(promise).rejects.toThrow()
+  })
+
+  test('Should return an account on success', async () => {
+    const { sut } = makeSut()
+    const account = await sut.loadByToken('any_token', 'any_role')
+    expect(account).toEqual(makeFakeAccount())
   })
 })
