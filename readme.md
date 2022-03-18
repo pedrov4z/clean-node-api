@@ -3,22 +3,24 @@
 
 # **Clean Node API**
 
-Essa API faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
+[Leia-me em Português (Brasil)](./readme-pt_BR.md)
 
-> ### [Link para o treinamento](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)
+This API is part of Rodrigo Manguinho's training at Udemy.
 
-O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID e, sempre que possível, aplicando Design Patterns para resolver alguns problemas comuns.
+> ### [Click here to access the course](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)
 
-> ## APIs previstas para esse treinamento:
+The objective of the training is to show how to create an API with a well-defined and decoupled architecture, using TDD (test-oriented programming) as a working methodology, Clean Architecture to distribute responsibilities in layers, always following the principles of SOLID and, whenever possible, applying Design Patterns to solve some common problems.
 
-1. [Cadastro](./requirements/signup.md)
-1. [Login](./requirements/login.md)
-1. [Criar enquete](./requirements/add-survey.md)
-1. [Listar enquetes](./requirements/surveys.md)
-1. [Responder enquete](./requirements/answer-survey.md)
-1. [Resultado da enquete](./requirements/survey-result.md)
+> ## APIs planned for this training:
 
-> ## Princípios aplicados:
+1. [User Signup](./requirements/signup.md)
+1. [User Login](./requirements/login.md)
+1. [Create poll](./requirements/add-survey.md)
+1. [List polls](./requirements/surveys.md)
+1. [Answer poll](./requirements/answer-survey.md)
+1. [Survey results](./requirements/survey-result.md)
+
+> ## Applied principles:
 * Single Responsibility Principle (SRP)
 * Open Closed Principle (OCP)
 * Liskov Substitution Principle (LSP)
@@ -28,7 +30,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Composition Over Inheritance
 * Small Commits
 
-> ## Design Patterns aplicados:
+> ## Design Patterns:
 * Factory
 * Adapter
 * Composite
@@ -38,7 +40,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Abstract Server
 * Composition Root
 
-> ## Metodologias/designs utilizados:
+> ## Methodologies:
 * TDD
 * Clean Architecture
 * DDD
@@ -51,7 +53,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Continuous Delivery
 * Continuous Deployment
 
-> ## Bibliotecas e ferramentas utilizadas:
+> ## Libraries and tools:
 * NPM
 * Typescript
 * Git
@@ -74,19 +76,19 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Rimraf
 * In-Memory MongoDb Server
 
-> ## Features abordadas:
-* Atalhos no Git
-* Log de Erro
-* Segurança (Hashing, Encryption e Encoding)
+> ## Features covered:
+* Git Shortcuts
+* Error Logging
+* Security (Hashing, Encryption and Encoding)
 * CORS
 * Middlewares
-* Testes de Integração
-* Testes Unitários
-* Cobertura de Testes
+* Integration Tests
+* Unit Tests
+* Test Coverage
 * Mocks
 * Stubs
 * Spies
-* Deploy com Typescript
-* Deploy no Heroku
-* Uso de breakpoints no Typescript
-* Uso correto de tags no Git
+* Deploying with Typescript
+* Deploy using Heroku
+* Using breakpoints in Typescript
+* Correct use of Git tags
