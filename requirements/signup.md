@@ -1,24 +1,26 @@
-# Cadastro
+# User Signup
 
-> ## Caso de sucesso:
-1. ✅ Recebe uma requisição do tipo **POST** na rota **/api/signup**
-1. ✅ Valida dados obrigatórios **name**, **email**, **password** e **passwordConfirmation**
-1. ✅ Valida que **password** e **passwordConfirmation** são iguais
-1. ✅ Valida que o campo **email** é um e-mail válido
-1. ✅ Valida se já existe um usuário com o email fornecido
-1. ✅ Gera uma senha criptografada (essa senha não pode ser descriptografada)
-1. ✅ Cria uma conta para o usuário com os dados informados, substituindo a senha pela senha criptorafada
-1. ✅ Gera um token de acesso a partir do ID do usuário
-1. ✅ Atualiza os dados do usuário com o token de acesso gerado
-1. ✅ Retorna 200 com o token de acesso
+[Leia-me em Português (Brasil)](./signup-pt_BR.md)
 
-> ## Exceções:
-1. ✅ Retorna erro 404 se a API não existir
-1. ✅ Retorna erro 400 se **name**, **email**, **password** ou **passwordConfirmation** não forem fornecidos pelo client
-1. ✅ Retorna erro 400 se **password** e **passwordConfirmation** não forem iguais
-1. ✅ Retorna erro 400 se o campo **email** for um e-mail inválido
-1. ✅ Retorna erro 403 se o email fornecido já estiver em uso
-1. ✅ Retorna erro 500 se der erro ao tentar gerar uma senha criptografada
-1. ✅ Retorna erro 500 se der erro ao tentar criar a conta do usuário
-1. ✅ Retorna erro 500 se der erro ao tentar gerar o token de acesso
-1. ✅ Retorna erro 500 se der erro ao tentar atualizar o usuário com o token de acesso gerado
+> ## Success case:
+1. ✅ Receives a **POST** request from route **/api/signup**
+2. ✅ Validates required fields **name**, **email**, **password** and **passwordConfirmation**
+3. ✅ Validates **password** with **passwordConfirmation**
+4. ✅ Validates if **email** field has a valid format
+5. ✅ Validates if an user already exists with the provided email
+6. ✅ Generates a hashed password
+7. ✅ Creates the user account
+8. ✅ Generates an access token for the user ID
+9. ✅ Updates user data with the generated access token
+10. ✅ Returns 200 with the user's access token
+
+> ## Exceptions:
+1. ✅ Returns 404 error code if the route is not available
+2. ✅ Returns 400 error code if required fields **name**, **email**, **password** or **passwordConfirmation** were not provided by the client
+3. ✅ Returns 400 error code if **password** and **passwordConfirmation** don't match
+4. ✅ Returns 400 error code if provided **email** is invalid
+5. ✅ Returns 403 error code if provided **email** is already in use
+6. ✅ Returns 500 error code if something goes wrong while hashing the password
+7. ✅ Returns 500 error code if something goes wrong while creating the user account
+8. ✅ Returns 500 error code if something goes wrong while generating the access token
+9. ✅ Returns 500 error code if something goes wrong while updating the user data

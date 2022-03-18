@@ -1,14 +1,16 @@
-# Responder enquete
+# Answer poll
 
-> ## Caso de sucesso:
-1. ⛔️ Recebe uma requisição do tipo **PUT** na rota **/api/surveys/{survey_id}/results**
-1. ⛔️ Valida se a requisição foi feita por um usuário
-1. ⛔️ Valida se a resposta é um valor válido
-1. ⛔️ Cria um resultado de enquete com os dados fornecidos
-1. ⛔️ Retorna 200 com os dados do resultado da enquete
+[Leia-me em Português (Brasil)](./answer-survey-pt_BR.md)
 
-> ## Exceções:
-1. ⛔️ Retorna erro 404 se a API não existir
-1. ⛔️ Retorna erro 403 se não for um usuário
-1. ⛔️ Retorna erro 500 se a resposta enviada pelo client for uma resposta inválida
-1. ⛔️ Retorna erro 500 se der erro ao tentar criar o resultado da enquete
+> ## Success case:
+1. ⛔️ Receives a **PUT** request from route **/api/surveys/{survey_id}/results**
+2. ⛔️ Validates if the request was sent with an access token
+3. ⛔️ Validates if the request body contains a valid answer
+4. ⛔️ Creates a poll result with the given data
+5. ⛔️ Returns 200 with the poll result
+
+> ## Exceptions:
+1. ⛔️ Returns 404 error code if the route is not available
+2. ⛔️ Returns 403 error code if an access token is not provided
+3. ⛔️ Returns 400 error code if the request body contains invalid data
+4. ⛔️ Returns 500 error code if something goes wrong while generating the poll result

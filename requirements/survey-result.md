@@ -1,11 +1,13 @@
-# Resultado da enquete
+# Survey results
 
-> ## Caso de sucesso:
-1. ⛔️ Recebe uma requisição do tipo **GET** na rota **/api/surveys/{survey_id}/results**
-1. ⛔️ Valida se a requisição foi feita por um usuário
-1. ⛔️ Retorna 200 com os dados do resultado da enquete
+[Leia-me em Português (Brasil)](./survey-result-pt_BR.md)
+
+> ## Success case:
+1. ⛔️ Receives a **GET** request from route **/api/surveys/{survey_id}/results**
+2. ⛔️ Validates if the request was sent with an access token
+3. ⛔️ Returns 200 with the poll result
 
 > ## Exceções:
-1. ⛔️ Retorna erro 404 se a API não existir
-1. ⛔️ Retorna erro 403 se não for um usuário
-1. ⛔️ Retorna erro 500 se der erro ao tentar listar o resultado da enquete
+1. ⛔️ Returns 404 error code if the route is not available
+2. ⛔️ Returns 403 error code if an access token is not provided
+3. ⛔️ Returns 500 error code if something goes wrong while collecting poll data
