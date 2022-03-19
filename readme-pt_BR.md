@@ -1,36 +1,51 @@
 [![Build Status](https://app.travis-ci.com/pedrov4z/clean-node-api.svg?branch=master)](https://app.travis-ci.com/pedrov4z/clean-node-api)
 [![Coverage Status](https://coveralls.io/repos/github/pedrov4z/clean-node-api/badge.svg?branch=master)](https://coveralls.io/github/pedrov4z/clean-node-api?branch=master)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
 # **Clean Node API**
 
+[![Link para o treinamento](./public/img/logo-course.png "Link para o treinamento")](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)
+
 [Read me in English (International)](./readme.md)
+
+---
+
+> ## [**Link para o treinamento**](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)
 
 Essa API faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
 
-> ### [Link para o treinamento](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)
-
 O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID e, sempre que possível, aplicando Design Patterns para resolver alguns problemas comuns.
+<br /><br />
+
+## [**Link para a documentação da API**](http://fordevs.herokuapp.com/api-docs)
 
 > ## APIs previstas para esse treinamento:
 
-1. [Cadastro](./requirements/signup.md)
-1. [Login](./requirements/login.md)
-1. [Criar enquete](./requirements/add-survey.md)
-1. [Listar enquetes](./requirements/surveys.md)
-1. [Responder enquete](./requirements/answer-survey.md)
-1. [Resultado da enquete](./requirements/survey-result.md)
+1. [Cadastro](./requirements/signup-pt_BR.md)
+1. [Login](./requirements/login-pt_BR.md)
+1. [Criar enquete](./requirements/add-survey-pt_BR.md)
+1. [Listar enquetes](./requirements/surveys-pt_BR.md)
+1. [Responder enquete](./requirements/answer-survey-pt_BR.md)
+1. [Resultado da enquete](./requirements/survey-result-pt_BR.md)
 
 > ## Princípios aplicados:
+
 * Single Responsibility Principle (SRP)
 * Open Closed Principle (OCP)
 * Liskov Substitution Principle (LSP)
 * Interface Segregation Principle (ISP)
 * Dependency Inversion Principle (DIP)
+* Separation of Concerns (SOC)
 * Don't Repeat Yourself (DRY)
+* You Aren't Gonna Need It (YAGNI)
+* Keep It Simple, Silly (KISS)
 * Composition Over Inheritance
 * Small Commits
 
 > ## Design Patterns aplicados:
+
 * Factory
 * Adapter
 * Composite
@@ -41,6 +56,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Composition Root
 
 > ## Metodologias/designs utilizados:
+
 * TDD
 * Clean Architecture
 * DDD
@@ -54,6 +70,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Continuous Deployment
 
 > ## Bibliotecas e ferramentas utilizadas:
+
 * NPM
 * Typescript
 * Git
@@ -61,11 +78,18 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Jest
 * MongoDb
 * Travis CI
-* Coveralls
+* Swagger
 * Bcrypt
 * JsonWebToken
+* Faker
+* Coveralls
 * Validator
 * Express
+* Apollo Server Express
+* Graphql
+* Graphql ISO Date
+* Graphql Scalars
+* Graphql Tools
 * Supertest
 * Husky
 * Lint Staged
@@ -75,20 +99,82 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Nodemon
 * Rimraf
 * In-Memory MongoDb Server
+* MockDate
+* Module-Alias
+* Copyfiles
+* Npm Check
+* Bson ObjectId
+* Apollo Server Integration Testing
 
-> ## Features abordadas:
-* Atalhos no Git
+> ## Features do NodeJS
+
+* Documentação de API com Swagger
+* API Rest com Express
+* GraphQL com Apollo Server
 * Log de Erro
 * Segurança (Hashing, Encryption e Encoding)
 * CORS
 * Middlewares
-* Testes de Integração
+* Nível de Acesso nas Rotas (Admin, User e Anônimo)
+* Deploy no Heroku
+* Servir Arquivos Estáticos
+
+> ## Features do GraphQL
+
+* Types
+* Queries
+* Mutations
+* Resolvers
+* Directives
+* Scalars
+* Plugins
+
+> ## Features do Git
+
+* Alias
+* Log Personalizado
+* Branch
+* Reset
+* Amend
+* Tag
+* Stash
+* Rebase
+* Merge
+
+> ## Features do Typescript
+
+* POO Avançado
+* Interface
+* TypeAlias
+* Namespace
+* Utility Types
+* Modularização de Paths
+* Configurações
+* Build
+* Deploy
+* Uso de Breakpoints
+
+> ## Features de Testes
+
 * Testes Unitários
+* Testes de Integração (API Rest & GraphQL)
 * Cobertura de Testes
+* Test Doubles
 * Mocks
 * Stubs
 * Spies
-* Deploy com Typescript
-* Deploy no Heroku
-* Uso de breakpoints no Typescript
-* Uso correto de tags no Git
+* Fakes
+
+> ## Features do MongoDb
+
+* Connect e Reconnect
+* Collections
+* InsertOne e InsertMany
+* Find, FindOne e FindOneAndUpdate
+* DeleteMany
+* UpdateOne
+* Aggregation (Match, Group, Unwind, Lookup, AddFields, Project, Sort)
+* ObjectId
+* Upsert e ReturnOriginal
+* Push, Divide, Multiply, ArrayElemAt, Cond, Sum
+* Filter, Map, Reduce, MergeObjects, ConcatArrays
