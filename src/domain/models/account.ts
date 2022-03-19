@@ -1,5 +1,6 @@
-import { AddAccountModel } from '@/domain/usecases/add-account'
-
-export interface AccountModel extends AddAccountModel {
+export type AccountModel = {
   id: string
+  name: string
+  email: string
+  password: string
 }
