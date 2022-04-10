@@ -1,6 +1,6 @@
 # Survey results
 
-[Leia-me em Português (Brasil)](./survey-result-pt_BR.md)
+[Leia-me em Português (Brasil)](./load-survey-result-pt_BR.md)
 
 > ## Success case:
 1. ⛔️ Receives a **GET** request from route **/api/surveys/{survey_id}/results**

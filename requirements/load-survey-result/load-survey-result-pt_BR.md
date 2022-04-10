@@ -1,6 +1,6 @@
 # Resultado da enquete
 
-[Read me in English (International)](./survey-result.md)
+[Read me in English (International)](./load-survey-result.md)
 
 > ## Caso de sucesso:
 1. ⛔️ Recebe uma requisição do tipo **GET** na rota **/api/surveys/{survey_id}/results**

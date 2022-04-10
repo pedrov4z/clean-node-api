@@ -1,6 +1,6 @@
 # Listar enquetes
 
-[Read me in English (International)](./surveys.md)
+[Read me in English (International)](./load-surveys.md)
 
 > ## Caso de sucesso:
 1. ✅ Recebe uma requisição do tipo **GET** na rota **/api/surveys**

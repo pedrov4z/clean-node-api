@@ -1,6 +1,6 @@
 # Answer poll
 
-[Leia-me em Português (Brasil)](./answer-survey-pt_BR.md)
+[Leia-me em Português (Brasil)](./save-survey-result-pt_BR.md)
 
 > ## Success case:
 1. ⛔️ Receives a **PUT** request from route **/api/surveys/{survey_id}/results**

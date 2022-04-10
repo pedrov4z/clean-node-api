@@ -23,12 +23,12 @@ The objective of the training is to show how to create an API with a well-define
 
 > ## APIs planned for this training:
 
-1. [User Signup](./requirements/signup.md)
-1. [User Login](./requirements/login.md)
-1. [Create poll](./requirements/add-survey.md)
-1. [List polls](./requirements/surveys.md)
-1. [Answer poll](./requirements/answer-survey.md)
-1. [Survey results](./requirements/survey-result.md)
+1. [User Signup](./requirements/signup/signup.md)
+1. [User Login](./requirements/login/login.md)
+1. [Create poll](./requirements/add-survey/add-survey.md)
+1. [List polls](./requirements/load-surveys/load-surveys.md)
+1. [Answer poll](./requirements/save-survey-result/save-survey-result.md)
+1. [Survey results](./requirements/load-survey-result/load-survey-result.md)
 
 > ## Applied principles:
 

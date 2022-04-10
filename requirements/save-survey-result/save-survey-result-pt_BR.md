@@ -1,6 +1,6 @@
 # Responder enquete
 
-[Read me in English (International)](./answer-survey.md)
+[Read me in English (International)](./save-survey-result.md)
 
 > ## Caso de sucesso:
 1. ⛔️ Recebe uma requisição do tipo **PUT** na rota **/api/surveys/{survey_id}/results**

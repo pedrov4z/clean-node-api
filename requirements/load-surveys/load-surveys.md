@@ -1,6 +1,6 @@
 # List polls
 
-[Leia-me em Português (Brasil)](./surveys-pt_BR.md)
+[Leia-me em Português (Brasil)](./load-surveys-pt_BR.md)
 
 > ## Success case:
 1. ✅ Receives a **GET** request from route **/api/surveys**
