@@ -18,4 +18,4 @@
 1. ⛔️ Returns **400** error code if the request body contains invalid data
 1. ⛔️ Returns **500** error code if something goes wrong while generating the poll result
 1. ⛔️ Returns **500** error code if something goes wrong while updating the poll result
-1. ⛔️ Returns **500** error code if something goes wrong while loading the poll
+1. ✅ Returns **500** error code if something goes wrong while loading the poll
