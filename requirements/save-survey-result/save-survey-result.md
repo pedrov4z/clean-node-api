@@ -9,7 +9,7 @@
 1. ✅ Validates if the request body contains a valid **answer**
 1. ✅ **Creates** a poll result if it doesn't already exists
 1. ✅ **Updates** the poll result if it exists
-1. ⛔️ Returns **200** with the poll result
+1. ✅ Returns **200** with the poll result
 
 > ## Exceptions:
 1. ⛔️ Returns **404** error code if the route is not available
