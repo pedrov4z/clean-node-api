@@ -1,3 +1,4 @@
+import { mockAddSurveyParams, mockAddSurveyParamsArray } from '@/domain/test'
 import { Collection } from 'mongodb'
 import { MongoHelper } from '../helpers/mongo-helper'
 import { SurveyMongoRepository } from './survey-mongo-repository'
@@ -42,21 +43,7 @@ describe('Survey Mongo Repository', () => {
 
   describe('loadAll()', () => {
     test('Should load all surveys on success', async () => {
-      await surveyCollection.insertMany([{
-        question: 'any_question',
-        answers: [{
-          image: 'any_image',
-          answer: 'any_answer'
-        }],
-        date: new Date()
-      }, {
-        question: 'other_question',
-        answers: [{
-          image: 'other_image',
-          answer: 'other_answer'
-        }],
-        date: new Date()
-      }])
+      await surveyCollection.insertMany(mockAddSurveyParamsArray())
       const sut = makeSut()
       const surveys = await sut.loadAll()
       expect(surveys.length).toBe(2)
@@ -74,14 +61,7 @@ describe('Survey Mongo Repository', () => {
 
   describe('loadById()', () => {
     test('Should load survey by id on success', async () => {
-      const res = await surveyCollection.insertOne({
-        question: 'any_question',
-        answers: [{
-          image: 'any_image',
-          answer: 'any_answer'
-        }],
-        date: new Date()
-      })
+      const res = await surveyCollection.insertOne(mockAddSurveyParams())
       const sut = makeSut()
       const survey = await sut.loadById(res.insertedId.toHexString())
       expect(survey).toBeTruthy()
