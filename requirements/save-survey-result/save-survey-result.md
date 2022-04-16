@@ -15,7 +15,7 @@
 1. ⛔️ Returns **404** error code if the route is not available
 1. ⛔️ Returns **403** error code if an access token is not provided
 1. ✅ Returns **403** error code if an invalid survey_id is provided
-1. ⛔️ Returns **400** error code if the request body contains invalid data
+1. ✅ Returns **403** error code if the request body contains an invalid answer
 1. ⛔️ Returns **500** error code if something goes wrong while generating the poll result
 1. ⛔️ Returns **500** error code if something goes wrong while updating the poll result
 1. ✅ Returns **500** error code if something goes wrong while loading the poll
