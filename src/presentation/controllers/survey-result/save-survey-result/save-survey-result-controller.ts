@@ -10,7 +10,7 @@ export class SaveSurveyResultController implements Controller {
     try {
       const { body, params, accountId } = httpRequest
       const { surveyId } = params
-      const { answer, date } = body
+      const { answer } = body
       const survey = await this.loadSurveyById.loadById(surveyId)
       if (survey) {
         const answers = survey.answers.map(a => a.answer)
@@ -21,7 +21,7 @@ export class SaveSurveyResultController implements Controller {
           surveyId,
           accountId,
           answer,
-          date
+          date: new Date()
         })
         return ok(surveyResult)
       }
