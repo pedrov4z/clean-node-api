@@ -3,7 +3,8 @@
   "version": "2.2.0",
   "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
   "author": "Pedro Vaz",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:pedrovaz/clean-node-api",
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
