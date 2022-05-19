@@ -26,5 +26,35 @@ export const surveyPath = {
         $ref: '#/components/serverError'
       }
     }
+  },
+  post: {
+    security: [{
+      apiKeyAuth: []
+    }],
+    tags: ['Poll'],
+    summary: 'API endpoint for creating a poll',
+    requestBody: {
+      content: {
+        'application/json': {
+          schema: {
+            $ref: '#/schemas/addSurveyParams'
+          }
+        }
+      }
+    },
+    responses: {
+      204: {
+        description: 'Successful creation'
+      },
+      403: {
+        $ref: '#/components/forbidden'
+      },
+      404: {
+        $ref: '#/components/notFound'
+      },
+      500: {
+        $ref: '#/components/serverError'
+      }
+    }
   }
 }
